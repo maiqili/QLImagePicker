@@ -1,18 +1,18 @@
 //
-//  QLImagePIckerTests.m
-//  QLImagePIckerTests
+//  QLImagePIckerDemoTests.m
+//  QLImagePIckerDemoTests
 //
-//  Created by maiqili on 15/10/30.
+//  Created by maiqili on 15/11/5.
 //  Copyright © 2015年 maiqili. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface QLImagePIckerTests : XCTestCase
+@interface QLImagePIckerDemoTests : XCTestCase
 
 @end
 
-@implementation QLImagePIckerTests
+@implementation QLImagePIckerDemoTests
 
 - (void)setUp {
     [super setUp];

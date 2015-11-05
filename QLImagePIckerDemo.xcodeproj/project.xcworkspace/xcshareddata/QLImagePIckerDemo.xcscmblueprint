@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "74E10C08E8E45399AFB1ABA8C6963F26DB12D12B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "74E10C08E8E45399AFB1ABA8C6963F26DB12D12B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F73A0DA6-5B16-4637-8052-105802C35DB2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "74E10C08E8E45399AFB1ABA8C6963F26DB12D12B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "QLImagePIckerDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "QLImagePIckerDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maiqili\/QLImagePicker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "74E10C08E8E45399AFB1ABA8C6963F26DB12D12B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/maiqili\/QLImagePicker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "74E10C08E8E45399AFB1ABA8C6963F26DB12D12B"
+    }
+  ]
+}
