@@ -180,6 +180,7 @@ static CGRect swapWidthAndHeight(CGRect rect) {
     return mediaInfo;
 }
 
+//修正图片方向，使之正向（竖直）面对用户
 - (UIImage *)fixOrientationTo:(UIImageOrientation) orient image:(UIImage *)image
 {
     if (UIImageOrientationUp == orient) {

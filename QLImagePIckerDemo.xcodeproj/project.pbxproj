@@ -135,15 +135,15 @@
 			isa = PBXGroup;
 			children = (
 				B0FC26D01BEB017B00AD7A5D /* ImagePickerSource */,
-				B0FC26D51BEB017B00AD7A5D /* QLAssetPickerCell.h */,
-				B0FC26D61BEB017B00AD7A5D /* QLAssetPickerCell.m */,
-				B0FC26D71BEB017B00AD7A5D /* QLImageAssetPickerController.h */,
-				B0FC26D81BEB017B00AD7A5D /* QLImageAssetPickerController.m */,
-				B0FC26D91BEB017B00AD7A5D /* QLImagePickerCell.h */,
-				B0FC26DA1BEB017B00AD7A5D /* QLImagePickerCell.m */,
 				B0FC26DB1BEB017B00AD7A5D /* QLImagePickerConfig.h */,
 				B0FC26DC1BEB017B00AD7A5D /* QLImagePickerController.h */,
 				B0FC26DD1BEB017B00AD7A5D /* QLImagePickerController.m */,
+				B0FC26D91BEB017B00AD7A5D /* QLImagePickerCell.h */,
+				B0FC26DA1BEB017B00AD7A5D /* QLImagePickerCell.m */,
+				B0FC26D71BEB017B00AD7A5D /* QLImageAssetPickerController.h */,
+				B0FC26D81BEB017B00AD7A5D /* QLImageAssetPickerController.m */,
+				B0FC26D51BEB017B00AD7A5D /* QLAssetPickerCell.h */,
+				B0FC26D61BEB017B00AD7A5D /* QLAssetPickerCell.m */,
 			);
 			path = QLImagePicker;
 			sourceTree = "<group>";
