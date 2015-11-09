@@ -349,7 +349,7 @@ static CGRect swapWidthAndHeight(CGRect rect) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-//                [GPProgressHUD dismissGlobalHUD];
+//                [MBProgressHUD dismissGlobalHUD];
                 [self.delegate qLImagePickerController:self didFinishPickImageWithArray:transformArray];
             });
         });
