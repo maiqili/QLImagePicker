@@ -162,21 +162,21 @@ static CGRect swapWidthAndHeight(CGRect rect) {
     
     NSMutableDictionary *mediaInfo = [NSMutableDictionary dictionary];
     
-    @autoreleasepool {//及时释放掉多余的资源
-        ALAssetRepresentation *assetRepresentation = [asset defaultRepresentation];
-        UIImageOrientation imageOrientation = (UIImageOrientation)[assetRepresentation orientation];
-        
-        UIImage *originalImage = [self fixOrientationTo:imageOrientation image:[UIImage imageWithCGImage:[assetRepresentation fullResolutionImage]]];
-        
-        if (originalImage) {
-            [mediaInfo setObject:originalImage forKey:UIImagePickerControllerOriginalImage];
-            [mediaInfo setObject:[asset valueForProperty:ALAssetPropertyType] forKey:UIImagePickerControllerMediaType];
-            [mediaInfo setObject:[asset valueForProperty:ALAssetPropertyAssetURL] forKey:UIImagePickerControllerReferenceURL];
-        }else {
-            [self.seclectAssetArray removeObject:asset];
-            return nil;
-        }
+    
+    ALAssetRepresentation *assetRepresentation = [asset defaultRepresentation];
+    UIImageOrientation imageOrientation = (UIImageOrientation)[assetRepresentation orientation];
+    
+    UIImage *originalImage = [self fixOrientationTo:imageOrientation image:[UIImage imageWithCGImage:[assetRepresentation fullResolutionImage]]];
+    
+    if (originalImage) {
+        [mediaInfo setObject:originalImage forKey:UIImagePickerControllerOriginalImage];
+        [mediaInfo setObject:[asset valueForProperty:ALAssetPropertyType] forKey:UIImagePickerControllerMediaType];
+        [mediaInfo setObject:[asset valueForProperty:ALAssetPropertyAssetURL] forKey:UIImagePickerControllerReferenceURL];
+    }else {
+        [self.seclectAssetArray removeObject:asset];
+        return nil;
     }
+    
     return mediaInfo;
 }
 
@@ -286,7 +286,7 @@ static CGRect swapWidthAndHeight(CGRect rect) {
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
@@ -339,17 +339,17 @@ static CGRect swapWidthAndHeight(CGRect rect) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(){
             
             for (ALAsset *asset in self.seclectAssetArray) {
-                
-                //判断本地文件是否已经删除
-                NSDictionary *assetDict = [self mediaInfoFromAsset:asset];
-                if (assetDict) {
-                    [transformArray addObject:assetDict];
+                @autoreleasepool {//及时释放掉多余的资源
+                    //判断本地文件是否已经删除
+                    NSDictionary *assetDict = [self mediaInfoFromAsset:asset];
+                    if (assetDict) {
+                        [transformArray addObject:assetDict];
+                    }
                 }
             }
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-//                [MBProgressHUD dismissGlobalHUD];
+                //                [MBProgressHUD dismissGlobalHUD];
                 [self.delegate qLImagePickerController:self didFinishPickImageWithArray:transformArray];
             });
         });
