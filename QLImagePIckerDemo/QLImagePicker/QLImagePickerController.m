@@ -159,10 +159,7 @@ static CGRect swapWidthAndHeight(CGRect rect) {
 //把ALAsset转成dictionary回调出去
 - (NSDictionary *)mediaInfoFromAsset:(ALAsset *)asset
 {
-    
     NSMutableDictionary *mediaInfo = [NSMutableDictionary dictionary];
-    
-    
     ALAssetRepresentation *assetRepresentation = [asset defaultRepresentation];
     UIImageOrientation imageOrientation = (UIImageOrientation)[assetRepresentation orientation];
     
@@ -176,7 +173,6 @@ static CGRect swapWidthAndHeight(CGRect rect) {
         [self.seclectAssetArray removeObject:asset];
         return nil;
     }
-    
     return mediaInfo;
 }
 
