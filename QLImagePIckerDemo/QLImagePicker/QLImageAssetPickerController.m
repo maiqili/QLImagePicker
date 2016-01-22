@@ -99,7 +99,9 @@ UICollectionViewDelegateFlowLayout
 {
     [self.assetGroup enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
         if (result) {
-            [self.assetArray insertObject:result atIndex:0];
+            if ([[result defaultRepresentation] fullResolutionImage]) {
+                [self.assetArray insertObject:result atIndex:0];
+            }
         }
     }];
 }
